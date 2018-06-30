@@ -1,3 +1,6 @@
-<p>
-  game-control works!
-</p>
+<button class="btn btn-primary" *ngIf="!gameRunning" (click)="gameChange.emit(true)">
+  Start
+</button>
+<button class="btn btn-danger" *ngIf="gameRunning" (click)="gameChange.emit(false)">
+  Stop
+</button>
